@@ -1,0 +1,216 @@
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poetsen One', sans-serif;
+  background: linear-gradient(to bottom right, #fff200, #207706);
+  color: #003366;
+}
+
+header {
+  background-color: #021f02;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+}
+
+nav {
+  background-color: #ffd700;
+  text-align: center;
+  padding: 15px 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  margin: 5px 10px;
+  display: inline-block;
+  color: #000080;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #2fe70a;
+  color: white;
+}
+
+main {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.intro {
+  max-width: 10000px;
+  margin: auto;
+  font-size: 1.1em;
+  line-height: 1.5;
+  padding: 5px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.em;
+  font-weight: bold;
+  color: #006600;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+.descricao-imagens {
+  margin-top: 20px;
+  font-size: 1.1em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+ /* Caixa do controle de áudio */
+    .audio-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border: 1px solid #ccc;
+    }
+
+.audio-control p {
+  font-size: 0.9em;
+  margin: 5px 0 0 0;
+}
+
+ /* Checkbox escondido */
+    #fechar-audio {
+      display: none;
+    }
+
+    /* Botão de fechar */
+    .label-fechar {
+      display: inline-block;
+      margin-left: 10px;
+      color: red;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Esconde a caixa quando o checkbox é marcado */
+    #fechar-audio:checked ~ .audio-container {
+      display: none;
+    }
+
+footer {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* Imagem clicável */
+.foto-interativa {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.foto-interativa:hover {
+  transform: scale(1.05);
+}
+
+/* Balão oculto por padrão */
+.balao-mensagem {
+  display: none;
+  background: #fff;
+  color: #003366;
+  border: 2px solid #006600;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  margin: 20px auto 0;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Mostrar o balão quando o checkbox estiver marcado */
+#toggle-balao:checked + label + .balao-mensagem {
+  display: block;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px auto;
+    font-size: 1em;
+    padding: 10px;
+    width: 80%;
+  }
+
+  .intro, .card, .descricao-imagens {
+    font-size: 1em;
+  }
+
+  .audio-control {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
+
+.image-grid img {
+  border: 8px solid #ccc;
+  border-top: 8px solid #3498db;
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

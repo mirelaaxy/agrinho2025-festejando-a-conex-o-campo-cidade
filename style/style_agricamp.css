@@ -1,0 +1,364 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESTRUTURA GERAL */
+body {
+  font-family: 'Tangerine', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #e0e0e0;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* CABEÇALHO */
+header {
+  background: #357a38;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5em;
+}
+
+/* NAVEGAÇÃO */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+nav a {
+  color: #000080;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #82ee29;
+  color: white;
+}
+
+/* TELA DE BOAS-VINDAS */
+.tela-cheia {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.imagem-boasvindas,
+.imagem-pensar {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+/* TEXTO COM ANIMAÇÃO */
+.texto-crescendo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #2a5c2d;
+  max-width: 90vw;
+  animation: crescerTexto 10s ease forwards;
+}
+
+@keyframes crescerTexto {
+  0% { font-size: 1.2rem; opacity: 0; }
+  50% { opacity: 1; }
+  100% { font-size: 1.5rem; opacity: 0; }
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* CONTEÚDO COM IMAGEM */
+.pagina-com-imagem {
+  text-align: center;
+}
+
+.pagina-com-imagem .imagem-pagina {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo-texto {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2a5c2d;
+  padding: 0 15px;
+}
+
+/* PERGUNTA */
+.pergunta {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #357a38;
+  max-width: 600px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* GRADE DE IMAGENS */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  padding: 0 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* SEÇÃO AGRICAMP */
+#agricamp {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+#agricamp h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.agricamp {
+  display: flex;
+  flex-wrap: wrap;
+  background: #a395b4;
+  box-shadow: 0 4px 10px #877997;
+  border-radius: 10px;
+  margin: 30px 10px;
+  overflow: hidden;
+}
+
+.agricamp img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  flex: 1 1 100%;
+}
+
+.text-box {
+  flex: 1 1 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* BLOCOS DE IMAGEM COM TEXTO */
+.imagem-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.imagem-box img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagem-box img:hover {
+  transform: scale(1.05);
+}
+
+.texto {
+  max-width: 700px;
+  margin: 0 20px;
+  padding: 20px;
+  background-color: white;
+  border-left: 5px solid #2c974b;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* LINKS ESPECIAIS NO MENU */
+.menu-links a.link-menu {
+  display: inline-block;
+  margin: 10px 15px 10px 0;
+  padding: 8px 15px;
+  background-color: #357a38;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.menu-links a.link-menu:hover {
+  background-color: #2a5c2d;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #e91e63;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  display: inline-block;
+}
+
+/* -------------------------- */
+/* MEDIA QUERIES - RESPONSIVO */
+/* -------------------------- */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .texto-crescendo {
+    font-size: 1rem;
+  }
+
+  nav a {
+    font-size: 1em;
+    padding: 8px 10px;
+  }
+
+  .imagem-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagem-box img {
+    max-width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .texto {
+    margin: 0 auto;
+    font-size: 1em;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-pagina {
+    max-width: 100%;
+  }
+
+  .texto {
+    font-size: 0.95em;
+  }
+
+  .pagina-com-imagem .imagem-pagina {
+    margin-bottom: 10px;
+  }
+} 
+.agrinho-tecnologia {
+  background-color: #f7fff0;
+  border-left: 8px solid #4caf50;
+  padding: 25px;
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
+}
+
+.agrinho-tecnologia h3 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.agrinho-tecnologia p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+}
+

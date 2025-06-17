@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f9d423, #2ed318);
+  font-family: 'Poetsen One', cursive;
+  text-align: center;
+  color: #03080e;
+}
+
+.pular {
+  top: 20px;
+  right: 20px;
+  background: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.imagem-intro img {
+  margin-top: 5px;
+  max-width: 60%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.intro {
+  margin-top: 40px;
+  font-size: 2vw;
+  animation: crescer 12s ease-in-out forwards;
+}
+
+@keyframes crescer {
+  0% { font-size: 0.5vw; opacity: 0; }
+  8% { font-size: 0.5vw; opacity: 1; }
+  10% { font-size: 0.5vw; }
+  15% { font-size: 0.5vw; }
+  25% { font-size: 0.5vw; opacity: 0;}
+}
+
+.caixa-boas-vindas .assinatura {
+  text-align: center;
+  font-style: italic;
+  color: #8b4513;
+  font-size: 12px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .intro {
+    font-size: 2vw;
+  }
+
+  .caixa-boas-vindas {
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+  }
+}
+
+@media (max-width: 150px) {
+  .intro {
+    font-size: 1vw;
+  }
+  .caixa-boas-vindas {
+    font-size: 14px;
+  }
+
+  .imagem-intro img {
+    max-width: 60%;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+footer {
+  animation: pulse 2s infinite;
+}
+
+body {
+  animation: pulse 4s infinite;
+}

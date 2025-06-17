@@ -1,0 +1,152 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2fbe0; /* tom claro e agrícola */
+  color: #2e3d27;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(90deg, #7cc576, #a3e4ab, #f9f871); /* verde para amarelo */
+  color: #2e3d27;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav {
+  background-color: #d4eec7;
+  text-align: center;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #3b552f;
+  margin: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #1f1f1f;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 20px;
+}
+
+.pagina-com-imagem {
+  text-align: center;
+}
+
+.pagina-com-imagem img.imagem-pagina {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.texto-crescendo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: crescerTexto 10s ease forwards;
+  text-align: center;
+  color: #4b7112; /* verde mais vibrante */
+  margin-top: 10px;
+}
+
+@keyframes crescerTexto {
+  0% {
+    font-size: 1.2rem;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    font-size: 1.6rem;
+    opacity: 1;
+  }
+}
+
+/* Seções com texto e imagem */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  background: #ffffff;
+  border: 2px solid #d8f3dc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-box,
+.text-box {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1em;
+  color: #37482f;
+}
+
+/* Rodapé */
+footer {
+  background-color: #bce4c0;
+  color: #2e3d27;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .section.reverse {
+    flex-direction: column;
+  }
+
+  .text-box {
+    padding: 10px;
+  }
+}
